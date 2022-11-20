@@ -2,7 +2,7 @@
     --background-gradient: radial-gradient(#429ebd, #053f5c);
     --background-solid: #053f5c;
     --content-bg: #26C485;
-    /* --active-col: #f27f0c; */
+    --current-col: #FFFF82;
     --active-col: var(--content-bg);
     --text-col: #141414;
     --shadow-col: #565656;
@@ -14,7 +14,11 @@ a, h1 {
 }
 
 a:hover, h1:hover {
-    color: var(--active-col)
+    color: var(--active-col);
+}
+
+a#current {
+    color: var(--current-col);
 }
 
 html,
