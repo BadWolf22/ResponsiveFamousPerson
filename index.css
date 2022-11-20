@@ -1,0 +1,157 @@
+:root {
+    --background-gradient: radial-gradient(#429ebd, #053f5c);
+    --background-solid: #053f5c;
+    --content-bg: #26C485;
+    /* --active-col: #f27f0c; */
+    --active-col: var(--content-bg);
+    --text-col: #141414;
+    --shadow-col: #565656;
+}
+
+a {
+    color: var(--text-col);
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--active-col)
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    scroll-behavior: smooth;
+    background-image: var(--background-gradient);
+    background-color: var(--background-solid);
+    /* https://stackoverflow.com/a/31712795 */
+    background-attachment: fixed;
+    color: white;
+}
+
+#container {
+    display: grid;
+    grid-template-areas:
+        "nav nav"
+        "cover header"
+        "cover content"
+        "cover showcase"
+        "footer footer";
+    grid-template-rows: 3em 3em 1fr 1fr 3em;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#header {
+    grid-area: header;
+    margin: 0;
+    text-align: center;
+}
+
+#cover {
+    object-fit: cover;
+    grid-area: cover;
+    width: 100%;
+    height: 90%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/04/Elon_Musk_-_The_Summit_2013.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 15%;
+    background-repeat: no-repeat;
+}
+
+#content,
+#showcase,
+#cover {
+    background-color: var(--content-bg);
+    margin: 0.5em 1em;
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px var(--shadow-col);
+}
+
+#content {
+    grid-area: content;
+    text-align: justify;
+}
+
+#content>p {
+    text-indent: 2em;
+}
+
+#showcase {
+    grid-area: showcase;
+    border-radius: 30px;
+}
+
+#slider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.card {
+    width: 20%;
+    margin: 1em;
+    aspect-ratio: 1;
+    /* https://stackoverflow.com/a/29103071 */
+    object-fit: cover;
+}
+
+#slider::-webkit-scrollbar {
+    display: none;
+}
+
+#nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--nav-bg);
+}
+
+#nav>a {
+    margin: 1em;
+}
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+    #container {
+        display: grid;
+        grid-template-areas:
+            "nav"
+            "cover"
+            "header"
+            "content"
+            "showcase"
+            "footer";
+        grid-template-rows: 3em 60% 3em 1fr 1fr 3em;
+        grid-template-columns: 100fr;
+        align-items: center;
+        ;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #nav {
+        justify-content: space-around;
+    }
+
+    #cover {
+        max-width: calc(100% - 4em);
+    }
+}
