@@ -8,12 +8,12 @@
     --shadow-col: #565656;
 }
 
-a {
+a, h1 {
     color: var(--text-col);
     transition: color 0.2s;
 }
 
-a:hover {
+a:hover, h1:hover {
     color: var(--active-col)
 }
 
@@ -142,7 +142,6 @@ body {
         grid-template-rows: 3em 60% 3em 1fr 1fr 3em;
         grid-template-columns: 100fr;
         align-items: center;
-        ;
         height: 100%;
         object-fit: cover;
     }
