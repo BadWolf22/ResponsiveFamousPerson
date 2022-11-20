@@ -34,6 +34,7 @@ body {
     /* https://stackoverflow.com/a/31712795 */
     background-attachment: fixed;
     color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #container {
