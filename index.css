@@ -2,7 +2,7 @@
     --background-gradient: radial-gradient(#429ebd, #053f5c);
     --background-solid: #053f5c;
     --content-bg: #26C485;
-    --current-col: #FFFF82;
+    --current-col: #e0e32a;
     --active-col: var(--content-bg);
     --text-col: #141414;
     --shadow-col: #565656;
@@ -133,7 +133,7 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     #container {
         display: grid;
         grid-template-areas:
