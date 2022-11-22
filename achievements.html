@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
 
     <title>Elon Musk - Achievements | Matthew Postel's Famous Person</title>
     
@@ -22,9 +22,38 @@
             <a href="works.html">Notable Works</a>
         </nav>
         <div id="cover"></div>
-        <h1 id="header">Achievements</h1>
+        <h1 id="header"><a href="https://en.wikipedia.org/wiki/List_of_awards_and_honors_received_by_Elon_Musk" target="_blank">Achievements</a></h1>
         <div id="content">
-            
+            <div id="selector">
+                <button class="showing" onclick="reveal(this, '#award1')">Richest Man in the World</button>
+                <button onclick="reveal(this, '#award2')">Edison Achievement Award</button>
+                <button onclick="reveal(this, '#award3')">Person of the Year</button>
+            </div>
+            <div id="awards">
+                <div class="awardSection showing" id="award1">
+                    <h2>Elon Musk Named: "The Richest Man in the World"</h2>
+                    <ul>
+                        <li>On January 7, 2021 Bloomberg rankings listed Elon Musk as the wealthiest person in the world.</li>
+                        <li>Three days later, Musk was ranked as #1 on Forbes' Billionaires List</li>
+                    </ul>
+                    <img src="https://www.visualcapitalist.com/wp-content/uploads/2021/01/elon-musk-worlds-richest-person.jpg"/>
+                </div>
+                <div class="awardSection" id="award2">
+                    <h2>Elon Musk Awarded: "Edison Achievement Award"</h2>
+                    <ul>
+                        <li>In 2014, Elon Musk was bestowed the Edison Achievement Award for his "commitment to innovation throughout his career".</li>
+                        <li>[Below] is a photo of Musk receiving the award alongside Yang Yuanqing</li>
+                    </ul>
+                    <img src="https://mma.prnewswire.com/media/1245385/Yang_Yuanqing__Chairman_of_Lenovo_and_Elon_Musk_of_Tesla_and_SpaceX__were_honored_recipients_of_the.jpg"/>
+                </div>
+                <div class="awardSection" id="award3">
+                    <h2>Elon Musk Named: "Person of the Year"</h2>
+                    <ul>
+                        <li>On December 13, 2021 Time magazine named Musk Person of the Year.</li>
+                    </ul>
+                    <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F1f92d036-5c34-11ec-90d0-c463baf3512f.jpg?crop=1600%2C900%2C0%2C0"/>
+                </div>
+            </div>
         </div>
         <div id="footer">
             <p>&copy; 2022 - Matthew Postel</p>

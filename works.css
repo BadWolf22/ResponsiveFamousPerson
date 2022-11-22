@@ -30,14 +30,6 @@
     flex-direction: row;
     flex: 1 0;
 }
-.workSection > * {
-    flex: 1;
-}
-.workSection > img {
-    flex: 0 1;
-    max-width: 50%;
-    object-fit: cover;
-}
 
 .workExpand {
     flex: 1 2;
