@@ -1,7 +1,7 @@
 let slider = document.querySelector("#slider");
-let index = 1;
+let index = 2;
 let dX = 1;
-let delay = 4000;
+let delay = 3000;
 
 slider.addEventListener('mouseenter', (e) => {
     clearInterval(scroller);
